@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shopware.Api.Utili;
+using System;
 using System.Runtime.Serialization;
 
 namespace Shopware.Api.Entities
@@ -54,28 +55,8 @@ namespace Shopware.Api.Entities
         public string packUnit { get; set; }
         [DataMember]
         public bool shippingFree { get; set; }
-        [DataMember(Name = "releaseDate")]
-        internal string releaseDateString { get; set; }
-        [IgnoreDataMember]
-        public DateTime releaseDate
-        {
-            get
-            {
-                try
-                {
-                    return DateTime.Parse(releaseDateString);
-                }
-                catch (Exception e)
-                {
-                    return DateTime.MinValue;
-                }
-
-            }
-            set
-            {
-                releaseDateString = value.ToString("o");
-            }
-        }
+        [DataMember]
+        public SwDateTime releaseDate { get; set; }
         [DataMember]
         public string shippingTime { get; set; }
         [DataMember]

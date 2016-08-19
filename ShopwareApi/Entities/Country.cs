@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Shopware.Api.Entities
 {
     [DataContract]
-    [ShopwareEntity(EntityName = "categories", AllowedOperation = OperationTypes.Get | OperationTypes.GetList | OperationTypes.Put | OperationTypes.Post | OperationTypes.Delete)]
+    [ShopwareEntity(EntityName = "countries", AllowedOperation = OperationTypes.Get | OperationTypes.GetList | OperationTypes.Put | OperationTypes.Post | OperationTypes.Delete)]
     public class Country
     {
         [DataMember]

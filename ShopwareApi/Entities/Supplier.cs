@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shopware.Api.Utili;
+using System;
 using System.Runtime.Serialization;
 
 namespace Shopware.Api.Entities
@@ -22,28 +23,7 @@ namespace Shopware.Api.Entities
         public string metaDescription { get; set; }
         [DataMember]
         public string metaKeywords { get; set; }
-        [DataMember(Name = "changed")]
-        internal string changedString { get; set; }
-        [IgnoreDataMember]
-        public DateTime changed
-        {
-            get
-            {
-                try
-                {
-                    return DateTime.Parse(changedString);
-                }
-                catch (Exception e)
-                {
-                    return DateTime.MinValue;
-                }
-
-            }
-            set
-            {
-                changedString = value.ToString("o");
-            }
-
-        }
+        [DataMember]
+        public SwDateTime changed { get; set; }
     }
 }

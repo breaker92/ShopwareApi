@@ -1,4 +1,5 @@
 ﻿using Shopware.Api.Entities.Attributes;
+using Shopware.Api.Utili;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,56 +51,15 @@ namespace Shopware.Api.Entities
         public bool? hideFilter { get; set; }
         [DataMember]
         public bool? hideTop { get; set; }
-        [DataMember(Name = "changed")]
-        internal string changedString { get; set; }
-        [IgnoreDataMember]
-        public DateTime changed
-        {
-            get
-            {
-                try
-                {
-                    return DateTime.Parse(changedString);
-                }
-                catch(Exception e)
-                {
-                    return DateTime.MinValue;
-                }
-                
-            }
-            set
-            {
-                changedString = value.ToString("o");
-            }
-
-        }
-        [DataMember(Name = "added")]
-        internal string addedString { get; set; }
-        [IgnoreDataMember]
-        public DateTime added
-        {
-            get
-            {
-                try
-                {
-                    return DateTime.Parse(addedString);
-                }
-                catch (Exception e)
-                {
-                    return DateTime.MinValue;
-                }
-
-            }
-            set
-            {
-                addedString = value.ToString("o");
-            }
-
-        }
+        [DataMember]
+        public SwDateTime changed { get; set; }
+        [DataMember]
+        public SwDateTime added { get; set; }
         [DataMember]
         public Dictionary<string, string> attribute { get; set; }
         //TODO: emotions    array Media
-        //TODO: customerGroups array
+        [DataMember]
+        public CustomerGroup[] customerGroups { get; set; }
         [DataMember]
         public int? childrenCount { get; set; }
         [DataMember]

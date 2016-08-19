@@ -1,8 +1,10 @@
-﻿using System.Runtime.Serialization;
+﻿using Shopware.Api.Entities.Attributes;
+using System.Runtime.Serialization;
 
 namespace Shopware.Api.Entities
 {
     [DataContract]
+    [ShopwareEntity(EntityName = "customerGroups", AllowedOperation = OperationTypes.Get | OperationTypes.GetList | OperationTypes.Put | OperationTypes.Post | OperationTypes.Delete)]
     public class CustomerGroup
     {
         [DataMember]

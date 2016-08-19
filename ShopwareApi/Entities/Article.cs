@@ -1,4 +1,5 @@
 ﻿using Shopware.Api.Entities.Attributes;
+using Shopware.Api.Utili;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,52 +33,10 @@ namespace Shopware.Api.Entities
         public string description { get; set; }
         [DataMember]
         public string descriptionLong { get; set; }
-        [DataMember(Name = "changed")]
-        internal string changedString { get; set; }
-        [IgnoreDataMember]
-        public DateTime changed
-        {
-            get
-            {
-                try
-                {
-                    return DateTime.Parse(changedString);
-                }
-                catch (Exception e)
-                {
-                    return DateTime.MinValue;
-                }
-
-            }
-            set
-            {
-                changedString = value.ToString("o");
-            }
-
-        }
-        [DataMember(Name = "added")]
-        internal string addedString { get; set; }
-        [IgnoreDataMember]
-        public DateTime added
-        {
-            get
-            {
-                try
-                {
-                    return DateTime.Parse(addedString);
-                }
-                catch (Exception e)
-                {
-                    return DateTime.MinValue;
-                }
-
-            }
-            set
-            {
-                addedString = value.ToString("o");
-            }
-
-        }
+        [DataMember]
+        public SwDateTime changed { get; set; }
+        [DataMember]
+        public SwDateTime added { get; set; }
         [DataMember]
         public bool active { get; set; }
         [DataMember]
@@ -100,52 +59,10 @@ namespace Shopware.Api.Entities
         public string template { get; set; }
         [DataMember]
         public int? mode { get; set; }
-        [DataMember(Name = "availableFrom")]
-        internal string availableFromString { get; set; }
-        [IgnoreDataMember]
-        public DateTime availableFrom
-        {
-            get
-            {
-                try
-                {
-                    return DateTime.Parse(availableFromString);
-                }
-                catch (Exception e)
-                {
-                    return DateTime.MinValue;
-                }
-
-            }
-            set
-            {
-                availableFromString = value.ToString("o");
-            }
-
-        }
-        [DataMember(Name = "availableTo")]
-        internal string availableToString { get; set; }
-        [IgnoreDataMember]
-        public DateTime availableTo
-        {
-            get
-            {
-                try
-                {
-                    return DateTime.Parse(availableToString);
-                }
-                catch (Exception e)
-                {
-                    return DateTime.MinValue;
-                }
-
-            }
-            set
-            {
-                availableToString = value.ToString("o");
-            }
-
-        }
+        [DataMember]
+        public SwDateTime availableFrom { get; set; }
+        [DataMember]
+        public SwDateTime availableTo { get; set; }
         [DataMember]
         public ArticleDetail mainDetail { get; set; }
         [DataMember]
