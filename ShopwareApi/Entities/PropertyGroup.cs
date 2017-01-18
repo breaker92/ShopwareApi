@@ -1,8 +1,10 @@
-﻿using System.Runtime.Serialization;
+﻿using Shopware.Api.Entities.Attributes;
+using System.Runtime.Serialization;
 
 namespace Shopware.Api.Entities
 {
     [DataContract]
+    [ShopwareEntity(EntityName = "propertyGroups", AllowedOperation = OperationTypes.Get | OperationTypes.GetList | OperationTypes.Put | OperationTypes.Post | OperationTypes.Delete)]
     public class PropertyGroup
     {
         [DataMember(EmitDefaultValue = false)]

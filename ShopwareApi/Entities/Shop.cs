@@ -1,5 +1,4 @@
-﻿using Shopware.Api.Entities.Attributes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -9,42 +8,66 @@ using System.Threading.Tasks;
 namespace Shopware.Api.Entities
 {
     [DataContract]
-    [ShopwareEntity(EntityName = "addresses", AllowedOperation = OperationTypes.Get | OperationTypes.GetList | OperationTypes.Put | OperationTypes.Post | OperationTypes.Delete)]
-    public class Address
+    public class Shop
     {
+
         [DataMember(EmitDefaultValue = false)]
-		public int id  { get; set; }
+        int id { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public string company  { get; set; }
+        int mainId { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public string department  { get; set; }
+        int categoryId { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public string salutation  { get; set; }
+        Category category { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public string firstname  { get; set; }
+        string name { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public string lastname  { get; set; }
+        string title { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public string street  { get; set; }
+        int position { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public string zipcode  { get; set; }
+        string host { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public string city  { get; set; }
+        string basePath { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public string phone  { get; set; }
+        string baseUrl { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public string vatId  { get; set; }
+        string hosts { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public string additionalAddressLine1  { get; set; }
+        bool secure { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-        public Country country { get; set; }
+        bool alwaysSecure { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public int? stateId  { get; set; }
+        string secureHost { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-        public State state { get; set; }
+        string secureBasePath { get; set; }
+
+        //[DataMember(EmitDefaultValue = false)]
+        //bool default { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public Array attribute  { get; set; }
+        bool active { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-        public Customer customer { get; set; }
+        bool customerScope { get; set; }
+
+        [DataMember(EmitDefaultValue = false)]
+        Locale locale { get; set; }
     }
+
 }
+

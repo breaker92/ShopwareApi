@@ -31,16 +31,16 @@ namespace Shopware.Api.Entities
         public string description { get; set; }
 
         [DataMember(EmitDefaultValue = false)]
-        public bool shippingFree { get; set; }
+        public bool? shippingFree { get; set; }
 
         [DataMember(EmitDefaultValue = false)]
-        public bool taxFree { get; set; }
+        public bool? taxFree { get; set; }
 
         [DataMember(EmitDefaultValue = false)]
-        public bool taxFreeUstId { get; set; }
+        public bool? taxFreeUstId { get; set; }
 
         [DataMember(EmitDefaultValue = false)]
-        public bool taxFreeUstIdChecked { get; set; }
+        public bool? taxFreeUstIdChecked { get; set; }
 
         [DataMember(EmitDefaultValue = false)]
         public bool active { get; set; }

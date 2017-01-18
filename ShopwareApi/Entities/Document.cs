@@ -1,5 +1,4 @@
-﻿using Shopware.Api.Entities.Attributes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -9,26 +8,41 @@ using System.Threading.Tasks;
 namespace Shopware.Api.Entities
 {
     [DataContract]
-    [ShopwareEntity(EntityName = "manufacturers", AllowedOperation = OperationTypes.Get | OperationTypes.GetList | OperationTypes.Put | OperationTypes.Post | OperationTypes.Delete)]
-    public class Manufactur
+    public class Document
     {
         [DataMember(EmitDefaultValue = false)]
-		public int id  { get; set; }
+        int id { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public string name  { get; set; }
+        string date { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public string image  { get; set; }
+        int typeId { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public string link  { get; set; }
+        DocumentType type { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public string description  { get; set; }
+        int customerId { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public string metaTitle  { get; set; }
+        Customer customer { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public string metaKeywords  { get; set; }
+        int orderId { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public string metaDescription  { get; set; }
+        Order order { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
-		public Array attribute  { get; set; }
+        double amount { get; set; }
+
+        [DataMember(EmitDefaultValue = false)]
+        int documentId { get; set; }
+
+        [DataMember(EmitDefaultValue = false)]
+        string hash { get; set; }
+
+        //attribute object DocumentAttribute
     }
 }

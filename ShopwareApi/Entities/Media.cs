@@ -36,8 +36,8 @@ namespace Shopware.Api.Entities
         [DataMember(EmitDefaultValue = false)]
 		public int fileSize  { get; set; }
         [DataMember(EmitDefaultValue = false)]
-        public int width { get; set; }
+        public int? width { get; set; }
         [DataMember(EmitDefaultValue = false)]
-        public int height { get; set; }
+        public int? height { get; set; }
     }
 }
