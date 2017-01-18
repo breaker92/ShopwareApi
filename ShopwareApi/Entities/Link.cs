@@ -5,15 +5,15 @@ namespace Shopware.Api.Entities
     [DataContract]
     public class Link
     {
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int id { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int articleId { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string name { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string link { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string target { get; set; }
     }
 }

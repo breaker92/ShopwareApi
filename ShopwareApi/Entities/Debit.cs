@@ -5,17 +5,17 @@ namespace Shopware.Api.Entities
     [DataContract]
     public class Debit
     {
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public int id  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public int customerId  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string account  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string bankCode  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string bankName  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string accountHolder  { get; set; }
     }
 }

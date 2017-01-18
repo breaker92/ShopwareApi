@@ -7,25 +7,25 @@ namespace Shopware.Api.Entities
     [DataContract]
     public class PaymentData
     {
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public int id  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public int paymentMeanId  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string useBillingData  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string bankName  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string bic  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string iban  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string accountNumber  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string bankCode  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string accountHolder  { get; set; }
-        [DataMember]
-		public SwDateTime createdAt  { get; set; }
+        [DataMember(EmitDefaultValue = false)]
+		public string createdAt  { get; set; }
     }
 }

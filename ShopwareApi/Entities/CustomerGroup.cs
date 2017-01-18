@@ -7,27 +7,27 @@ namespace Shopware.Api.Entities
     [ShopwareEntity(EntityName = "customerGroups", AllowedOperation = OperationTypes.Get | OperationTypes.GetList | OperationTypes.Put | OperationTypes.Post | OperationTypes.Delete)]
     public class CustomerGroup
     {
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int id { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string key { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string name { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public bool tax { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public bool taxInput { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public bool mode { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public double discount { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public double minimumOrder { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public double minimumOrderSurcharge { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public double? basePrice { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public double? percent { get; set; }
     }
 }

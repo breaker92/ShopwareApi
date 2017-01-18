@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Shopware.Api.Entities
 {
     [ShopwareEntity(EntityName = "generateArticleImages", AllowedOperation = OperationTypes.Put)]
-    public abstract class GenerateArticleImages
+    public class GenerateArticleImages
     {
 
     }

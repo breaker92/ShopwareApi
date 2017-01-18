@@ -5,13 +5,13 @@ namespace Shopware.Api.Entities
     [DataContract]
     public class ConfiguratorGroup
     {
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int id { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string description { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string name { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int position { get; set; }
     }
 }

@@ -5,11 +5,11 @@ namespace Shopware.Api.Entities
     [DataContract]
     public class Tax
     {
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int id { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string tax { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string name { get; set; }
     }
 }

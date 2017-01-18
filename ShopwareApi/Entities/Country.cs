@@ -12,52 +12,52 @@ namespace Shopware.Api.Entities
     [ShopwareEntity(EntityName = "countries", AllowedOperation = OperationTypes.Get | OperationTypes.GetList | OperationTypes.Put | OperationTypes.Post | OperationTypes.Delete)]
     public class Country
     {
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int id { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string name { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string iso { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string isoName { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int? position { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string description { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public bool shippingFree { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public bool taxFree { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public bool taxFreeUstId { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public bool taxFreeUstIdChecked { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public bool active { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string iso3 { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public bool displayStateInRegistration { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public bool forceStateInRegistration { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int areaId { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public State[] states { get; set; }
     }
 }

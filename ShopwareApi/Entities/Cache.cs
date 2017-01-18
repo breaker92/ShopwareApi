@@ -12,25 +12,25 @@ namespace Shopware.Api.Entities
     [ShopwareEntity(EntityName = "caches", AllowedOperation = OperationTypes.Get | OperationTypes.GetList | OperationTypes.Delete | OperationTypes.DeleteBatch)]
     public class Cache
     {
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string dir { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string size { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int files { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string freeSpace { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string name { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string backend { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string id { get; set; }
     }
 }

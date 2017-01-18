@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 namespace Shopware.Api.Entities.Responses
 {
     [DataContract]
-    internal class ListResponse<T> : BaseResponse
+    public class ListResponse<T> : BaseResponse
     {
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public T[] data { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int? total { get; set; }
     }
 }

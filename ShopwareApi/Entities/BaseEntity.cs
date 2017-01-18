@@ -5,9 +5,9 @@ namespace Shopware.Api.Entities
     [DataContract]
     public class BaseEntity
     {
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int id { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string name { get; set; }
     }
 }

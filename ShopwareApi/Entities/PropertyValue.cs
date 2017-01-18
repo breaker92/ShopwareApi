@@ -5,17 +5,17 @@ namespace Shopware.Api.Entities
     [DataContract]
     public class PropertyValue
     {
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int id { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int position { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int optionId { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public double? valueNumeric { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string value { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int? mediaId { get; set; }
     }
 }

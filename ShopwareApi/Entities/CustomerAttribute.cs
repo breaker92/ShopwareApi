@@ -5,10 +5,10 @@ namespace Shopware.Api.Entities
     [DataContract]
     public class CustomerAttribute
     {
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int id { get; set; }
 
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int customerId { get; set; }
     }
 }

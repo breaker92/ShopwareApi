@@ -12,37 +12,37 @@ namespace Shopware.Api.Entities
     [ShopwareEntity(EntityName = "addresses", AllowedOperation = OperationTypes.Get | OperationTypes.GetList | OperationTypes.Put | OperationTypes.Post | OperationTypes.Delete)]
     public class Address
     {
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public int id  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string company  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string department  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string salutation  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string firstname  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string lastname  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string street  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string zipcode  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string city  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string phone  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string vatId  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public string additionalAddressLine1  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public Country country { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
 		public int state  { get; set; }
-        [DataMember]
-		public array attribute  { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
+		public Array attribute  { get; set; }
+        [DataMember(EmitDefaultValue = false)]
         public Customer customer { get; set; }
     }
 }

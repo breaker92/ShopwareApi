@@ -2,7 +2,7 @@
 
 namespace Shopware.Api.Entities
 {
-    internal class ShopwareEnityAttribute : Attribute
+    public class ShopwareEnityAttribute : Attribute
     {
     }
 }

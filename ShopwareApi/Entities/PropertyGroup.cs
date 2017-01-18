@@ -5,15 +5,15 @@ namespace Shopware.Api.Entities
     [DataContract]
     public class PropertyGroup
     {
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int id { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string name { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int position { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public bool comparable { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int sortMode { get; set; }
     }
 }

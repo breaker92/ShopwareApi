@@ -3,7 +3,7 @@
 namespace Shopware.Api.Entities.Responses
 {
     [DataContract]
-    internal class PostResponse : SingelResponse<PostResponseData>
+    public class PostResponse : SingelResponse<PostResponseData>
     {
     }
 }

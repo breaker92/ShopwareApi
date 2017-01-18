@@ -121,7 +121,7 @@ namespace Shopware.Api
             var addressBuidler = new UriBuilder();
             addressBuidler.Host = ShopHost;
             addressBuidler.Path = "api/" + entityName + "/" + condition;
-            addressBuidler.Scheme = UseSSl ? "hhtps" : "http";
+            addressBuidler.Scheme = UseSSl ? "https" : "http";
             return addressBuidler.Uri;
         }
 

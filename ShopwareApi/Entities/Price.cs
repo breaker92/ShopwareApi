@@ -5,27 +5,27 @@ namespace Shopware.Api.Entities
     [DataContract]
     public class Price
     {
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int id { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int articleId { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public int articleDetailsId { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string customerGroupKey { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string from { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public string to { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public double price { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public double pseudoPrice { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public double? basePrice { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public double percent { get; set; }
-        [DataMember]
+        [DataMember(EmitDefaultValue = false)]
         public CustomerGroup customerGroup { get; set; }
     }
 }
